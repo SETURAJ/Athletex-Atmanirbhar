@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="title">Fill your Information Below</div>
+<form method="POST" class="form">
+    <div class="input-container ic1">
+      <div class="input_main">
+        <lable for="age" class="label">Age: </lable>
+        <input id="age" name="age" class="input" type="number" pattern="[0-9]+"  />
+        <h1 class="tag">yr</h1>
+      </div>
+     
+      
+    </div>
+    <div class="input-container ic2">
+      <div class="input_main">
+        <lable for="age" class="label">Weight: </lable>
+        <input id="weight" name="weight" class="input" type="number" pattern="[0-9]+" step="0.01" />
+        <h1 class="tag">Kg</h1>
+      </div>
+     
+    </div>
+    <div class="input-container ic2">
+      <div class="input_main">
+        <lable for="age" class="label">Height: </lable>
+      <input id="height" name="height" class="input" type="number" pattern="[0-9]+" step="0.01"/>
+      <h1 class="tag">Cm</h1>
+      </div>
+     
+    </div>
+    <div class="input-container ic2">
+      <div class="input_main">
+        <lable for="age" class="label">Bodyfat: </lable>
+        <input id="bodyfat" name="bodyfat" class="input" type="number" pattern="[0-9]+"step="0.01" />
+        <h1 class="tag">%</h1>
+      </div>
+
+       
+      </div>
+      <div class="input-container ic2">
+        <div class="input_main">
+        <lable for="age" class="label">Gender: </lable>
+        <select name="gender" class="input" id="gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+            <option value="1">Other</option>
+        </select>
+      </div>
+      </div>
+    <button type="text" class="submit">Submit</button>
+</form>
+</div>
+{% endblock %}

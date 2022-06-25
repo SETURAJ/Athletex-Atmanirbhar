@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container_display">
+    <div class="header_container">
+        <h1 class="header_label">Analysis</h1>
+    </div>
+    {% if res == 1 %}
+    <h1 class="result">Your body parameters tell us you are a super human, keep it up.</h1>
+    <!--<button class="diet_upload">Upload Your Diet<img class="plus" src="{{url_for('static', filename='add.png')}}"/></button>-->
+    {% elif res==2 %}
+    <h1 class="result">Your body parameters tell us you are optimum human, by using better diets you can make yourselves super human</h1>
+    {% elif res==3 %}
+    <h1 class="result">Your body parameters tell us you need to improve on your diet, we have some recommendations for you</h1>
+    {% elif res==4 %}
+    <h1 class="result">Your body parameters tell us you need to concentrate on your health and diet</h1>
+    {% endif %}
+    <div class="header_container">
+        <h1 class="header_label">Diet Recommendation</h1>
+    </div>
+    <div class="diet">
+        <h5 class="diet_plan">{{str}}</h5>
+    </div>
+    <div class="header_container">
+        <a class="header_a" href="/">Fill another Information</a>
+    </div>
+</div>
+{% endblock %}

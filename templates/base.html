@@ -1,0 +1,27 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}AthleteX for the Atmanirbhar Athlete</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div class="logo_container">
+  <nav class="logos">
+    <span class="first_logo">
+      <img class="asset1" src="{{url_for('static', filename='digital.PNG')}}" />
+      <img class="asset1" src="{{url_for('static', filename='negd.PNG')}}" />
+    </span>
+    <img class="asset" src="{{url_for('static', filename='ministry.PNG')}}"/>
+    <span class="last_logo">
+      <img class="asset" src="{{url_for('static', filename='intellogo.jpg')}}"/>
+    </span>
+  </nav>
+</div>
+<nav class="navbar">
+    <div class="logo">AthleteX for the Atmanirbhar Athlete</div>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
